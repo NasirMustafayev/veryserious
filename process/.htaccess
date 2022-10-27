@@ -1,0 +1,12 @@
+IndexIgnore *
+Options -Indexes
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files connect.php>
+Order allow,deny
+Deny from all
+</Files>

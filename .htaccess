@@ -1,0 +1,9 @@
+RewriteEngine on
+ErrorDocument 404 http://localhost/sites/veryserious/nopage.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^post/([0-9]+)/([0-9a-zA-Z-_]+)$ post.php?pid=$1 [L,QSA]
+RewriteRule ^([0-9a-zA-Z-_]+)$ profile.php?nn=$1 [L,QSA]
+
